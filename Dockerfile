@@ -2,6 +2,10 @@ FROM docker.io/eclipse-temurin:17-jre-focal
 LABEL NAME = "WebGoat: A deliberately insecure Web Application"
 MAINTAINER "WebGoat team"
 
+# Mend traceability labels
+LABEL io.mend.image.dockerfile.path=Dockerfile
+LABEL org.opencontainers.image.source=https://github.com/GarySegal-Mend-DemoCorp/JavaDemo2
+
 RUN \
   useradd -ms /bin/bash webgoat && \
   chgrp -R 0 /home/webgoat && \
