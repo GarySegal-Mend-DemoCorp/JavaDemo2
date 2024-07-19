@@ -43,6 +43,7 @@ jobs:
                 curl https://raw.githubusercontent.com/mend-toolkit/mend-examples/main/Scripts/Mend%20SCA/generate-async-report.sh -o generate-async-report.sh
                 chmod +x generate-async-report.sh
 
+                export MEND_URL=$MEND_URL/agent
                 export MEND_REPORTSCOPE=Project
                 export MEND_ORG_UUID=df2e8f58-5049-40dc-9780-7f7bfd48621c
                 export MEND_REPORTTYPE=AttributionReport
