@@ -36,7 +36,7 @@ jobs:
                 echo Downloading Mend CLI
                 curl -LJO https://downloads.mend.io/production/unified/latest/linux_amd64/mend && chmod +x mend
                 echo "Start Mend scan"
-                ./mend deps -s *//ScriptTests//GH_${{github.event.repository.name}}_${{github.ref_name}} --export-results dep-results.txt
+                ./mend deps -u -s *//ScriptTests//GH_${{github.event.repository.name}}_${{github.ref_name}} --export-results dep-results.txt
                 export WS_PROJECTTOKEN=$(grep -oP "(?<=token=)[^&]+" dep-results.txt)
                 echo "Project Token: $WS_PROJECTTOKEN"
 
