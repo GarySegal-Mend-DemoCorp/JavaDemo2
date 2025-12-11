@@ -1,6 +1,6 @@
 { 
   "settingsInheritedFrom": "GarySegal-Mend-DemoCorp/whitesource-config@main",
-  "issueSettingsSAST" {
+  "issueSettingsSAST": {
     "issueType": "finding"
   }
 }
